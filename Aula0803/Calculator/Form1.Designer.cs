@@ -199,6 +199,7 @@
             this.btnadição.TabIndex = 16;
             this.btnadição.Text = "+";
             this.btnadição.UseVisualStyleBackColor = true;
+            this.btnadição.Click += new System.EventHandler(this.btnadição_Click);
             // 
             // btnlimpar
             // 
