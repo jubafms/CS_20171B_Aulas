@@ -74,7 +74,7 @@ namespace Calculator
 
         private void btnadição_Click(object sender, EventArgs e)
         {
-            //retryytuyti
+            //retryytuyti4r
         }
     }
 }
