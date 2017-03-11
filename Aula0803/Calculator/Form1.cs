@@ -12,6 +12,13 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
+
+        float valor1 = 0;
+        float valor2 = 0;
+        float resultado = 0;
+        String operacao = "";
+
+
         public Form1()
         {
             InitializeComponent();
@@ -74,7 +81,93 @@ namespace Calculator
 
         private void btnadição_Click(object sender, EventArgs e)
         {
-            //retryytuyti4r
+            valor1 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+            operacao = "+";
+             
+        }
+
+        private void btnigual_Click(object sender, EventArgs e)
+        {
+
+            valor2 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+
+            switch (operacao)
+            {
+                case "+":
+                    resultado = valor1 + valor2;
+                    tbvisor.Text = string.Format("{0:G}", resultado);
+                    break;
+
+                case "-":
+                    resultado = valor1 - valor2;
+                    tbvisor.Text = string.Format("{0:G}", resultado);
+                    break;
+
+                case "*":
+                    resultado = valor1 * valor2;
+                    tbvisor.Text = string.Format("{0:G}", resultado);
+                    break;
+
+                case "/":
+                    resultado = valor1 / valor2;
+                    tbvisor.Text = string.Format("{0:G}", resultado);
+                    break;
+
+                case "p":
+                    resultado = 0;
+                    float aux = valor1;
+                    for( int i = 1; i < valor2; i++ )
+                    {
+                        resultado = aux * valor1;
+                        aux = resultado;
+                    }
+                    tbvisor.Text = string.Format("{0:G}", resultado);
+                    break;
+
+
+            }
+
+               
+                
+                       
+                     
+
+        }
+
+        private void btnmenos_Click(object sender, EventArgs e)
+        {
+            valor1 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+            operacao = "-";
+        }
+
+        private void btnmulti_Click(object sender, EventArgs e)
+        {
+            valor1 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+            operacao = "*";
+        }
+
+        private void btndivisao_Click(object sender, EventArgs e)
+        {
+            valor1 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+            operacao = "/";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpotencia_Click(object sender, EventArgs e)
+        {
+            valor1 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+            operacao = "p";
+
         }
     }
 }

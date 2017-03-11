@@ -45,6 +45,8 @@
             this.btnigual = new System.Windows.Forms.Button();
             this.btnadição = new System.Windows.Forms.Button();
             this.btnlimpar = new System.Windows.Forms.Button();
+            this.btnraiz = new System.Windows.Forms.Button();
+            this.btnpotencia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbvisor
@@ -163,6 +165,7 @@
             this.btndivisao.TabIndex = 12;
             this.btndivisao.Text = "/";
             this.btndivisao.UseVisualStyleBackColor = true;
+            this.btndivisao.Click += new System.EventHandler(this.btndivisao_Click);
             // 
             // btnmulti
             // 
@@ -172,6 +175,7 @@
             this.btnmulti.TabIndex = 13;
             this.btnmulti.Text = "*";
             this.btnmulti.UseVisualStyleBackColor = true;
+            this.btnmulti.Click += new System.EventHandler(this.btnmulti_Click);
             // 
             // btnmenos
             // 
@@ -181,6 +185,7 @@
             this.btnmenos.TabIndex = 14;
             this.btnmenos.Text = "-";
             this.btnmenos.UseVisualStyleBackColor = true;
+            this.btnmenos.Click += new System.EventHandler(this.btnmenos_Click);
             // 
             // btnigual
             // 
@@ -190,6 +195,7 @@
             this.btnigual.TabIndex = 15;
             this.btnigual.Text = "=";
             this.btnigual.UseVisualStyleBackColor = true;
+            this.btnigual.Click += new System.EventHandler(this.btnigual_Click);
             // 
             // btnadição
             // 
@@ -211,11 +217,33 @@
             this.btnlimpar.UseVisualStyleBackColor = true;
             this.btnlimpar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnraiz
+            // 
+            this.btnraiz.Location = new System.Drawing.Point(194, 104);
+            this.btnraiz.Name = "btnraiz";
+            this.btnraiz.Size = new System.Drawing.Size(44, 33);
+            this.btnraiz.TabIndex = 18;
+            this.btnraiz.Text = "raiz";
+            this.btnraiz.UseVisualStyleBackColor = true;
+            this.btnraiz.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnpotencia
+            // 
+            this.btnpotencia.Location = new System.Drawing.Point(194, 143);
+            this.btnpotencia.Name = "btnpotencia";
+            this.btnpotencia.Size = new System.Drawing.Size(68, 42);
+            this.btnpotencia.TabIndex = 19;
+            this.btnpotencia.Text = "potencia";
+            this.btnpotencia.UseVisualStyleBackColor = true;
+            this.btnpotencia.Click += new System.EventHandler(this.btnpotencia_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 263);
+            this.Controls.Add(this.btnpotencia);
+            this.Controls.Add(this.btnraiz);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.btnadição);
             this.Controls.Add(this.btnigual);
@@ -259,6 +287,8 @@
         private System.Windows.Forms.Button btnigual;
         private System.Windows.Forms.Button btnadição;
         private System.Windows.Forms.Button btnlimpar;
+        private System.Windows.Forms.Button btnraiz;
+        private System.Windows.Forms.Button btnpotencia;
     }
 }
 
