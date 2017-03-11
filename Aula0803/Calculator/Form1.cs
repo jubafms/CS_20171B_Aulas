@@ -127,14 +127,11 @@ namespace Calculator
                     break;
 
 
-            }
+                  }
 
                
                 
-                       
-                     
-
-        }
+ }
 
         private void btnmenos_Click(object sender, EventArgs e)
         {
@@ -159,6 +156,9 @@ namespace Calculator
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            valor1 = float.Parse(tbvisor.Text);
+            tbvisor.Text = "";
+            operacao = "r";
 
         }
 
